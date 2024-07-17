@@ -17,7 +17,7 @@
     grid-area: sidebar;
 }
 .Advertise{
-    grid-area:advertise;
+    grid-area:Advertise;
 }
 .footer{
     grid-area: footer;
@@ -26,8 +26,38 @@
     display: grid;
     grid-template-areas:
     "header header header header "
-    "nav main main saidbar"
+    "nav main main sidebar"
     "nav main main Advertise"
     "footer footer footer footer";
     gap: 21px;
+}
+
+/*For Small Device layout */
+
+@media screen and (max-width:576px) {
+    .contenar{
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "sidebar"
+        "Advertise"
+        "footer"
+        
+        ;
+    }
+}
+
+/* For Medium Device Layout */
+
+@media screen and (min-width:576px) and (max-width:992px) {
+    .contenar{
+        grid-template-areas: 
+        "header header header"
+        "nav nav nav"
+        "sidebar main main"
+        "Advertise footer footer"
+        
+        ;
+    }
 }
